@@ -63,18 +63,9 @@ module.exports = app => {
                 {
                     name: "admin"
                 },
-                {
-                    name: "businessOwner"
-                },
-                {
-                    name: "businessWorker"
-                }
             ],
             function (err, roles) {
                 if (err) {
-                    console.error(err);
-                    
-                    // logger.log(logLvl.LVL_ERROR, `error creating user roles - error ${err}`)
                     return;
                 }
                 if (!roles.length)

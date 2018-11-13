@@ -6,7 +6,7 @@
   "mongodb": {
     "host": "localhost",
     "port": 27017,
-    "database": "gprice",
+    "database": "loopback-seed",
     "name": "mongodb",
     "connector": "mongodb"
   }
