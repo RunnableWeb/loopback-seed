@@ -5,6 +5,14 @@
   "options": {
     "validateUpsert": true
   },
+  "scope": {
+    "include": [
+      "roles"
+    ]
+  },
+  "mixins": {
+    "NestFilter": {}
+  },
   "properties": {},
   "validations": [],
   "relations": {
