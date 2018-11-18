@@ -1,8 +1,10 @@
-// const logger = require('./../../logging/logger');
+const logger = require('./../../logger')();
 // const logLvl = require('./../../logging/log-levels.constants');
 
 
 module.exports = app => {
+    const LOGGER_NAME = "users-roles.seed";
+
     const Role = app.models.Role;
     const RoleMapping = app.models.RoleMapping;
     const AppUser = app.models.AppUser;
@@ -28,8 +30,8 @@ module.exports = app => {
             users.admin,
             (err, user) => {
                 if (err) {
-                    const errMesssage = `Failed to create admin user - error: ${err}`;
-                    // logger.log(logLvl.LVL_ERROR, errMesssage);
+                    const errMesssage = `Failed to create admin user`;
+                    logger.error(LOGGER_NAME, errMesssage, err);
                     reject(errMesssage);
                     return;
                 }
@@ -44,10 +46,7 @@ module.exports = app => {
     // init rols after all user has been setup
     usersPromise
         .then(users => _initRoles(users))
-        .catch(err => {
-            console.error(err);
-            // logger.log(logLvl.LVL_ERROR, `faild to init users - error: ${err}`);
-        });
+        .catch(err => {});
 
     function _setupAppUserRolesRelations() {
         // critical code to get user role
@@ -66,6 +65,7 @@ module.exports = app => {
             ],
             function (err, roles) {
                 if (err) {
+                    logger.error(LOGGER_NAME, 'Error creating init roles', err);
                     return;
                 }
                 
@@ -75,7 +75,7 @@ module.exports = app => {
                         principalId: users[role.name] ? users[role.name].getId() : ''
                     });
                 });
-                
+
             });
     }
 }
