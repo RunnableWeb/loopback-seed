@@ -68,13 +68,14 @@ module.exports = app => {
                 if (err) {
                     return;
                 }
-                if (!roles.length)
-                    roles.forEach(role => {
-                        role.principals.create({
-                            principalType: RoleMapping.USER,
-                            principalId: users[role.name] ? users[role.name].getId() : ''
-                        });
+                
+                roles.forEach(role => {
+                    role.principals.create({
+                        principalType: RoleMapping.USER,
+                        principalId: users[role.name] ? users[role.name].getId() : ''
                     });
+                });
+                
             });
     }
 }
