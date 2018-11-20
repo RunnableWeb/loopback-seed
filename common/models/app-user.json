@@ -24,5 +24,41 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+      "CreateOrUpdate": {
+        "accepts": [
+          {
+            "arg": "appUser",
+            "type": "Object",
+            "http": {
+              "source": "body"
+            }
+          }
+        ],
+        "returns": {
+          "arg": "appUser",
+          "type": "Object",
+          "root": true
+        },
+        "http": {
+          "path": "/createOrUpdate",
+          "verb": "POST"
+        }
+      },
+      "DeleteUser": {
+        "accepts": [
+          {
+            "arg": "id",
+            "type": "String",
+            "http": {
+              "source": "path"
+            }
+          }
+        ],
+        "http": {
+          "path": "/deleteUser/:id",
+          "verb": "DELETE"
+        }
+      }
+  }
 }

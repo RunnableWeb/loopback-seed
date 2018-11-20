@@ -75,7 +75,6 @@ module.exports = app => {
                         principalId: users[role.name] ? users[role.name].getId() : ''
                     });
                 });
-
             });
     }
 }
