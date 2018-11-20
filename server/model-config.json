@@ -33,7 +33,7 @@
   },
   "Role": {
     "dataSource": "mongodb",
-    "public": false
+    "public": true
   },
   "AppUser": {
     "dataSource": "mongodb",
