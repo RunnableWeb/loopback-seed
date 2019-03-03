@@ -4,8 +4,8 @@
  */
 
 'use strict';
-const createValidationContext = require('../../utils/relations/validations').createValidationContext;
-const createRelationsContext = require('../../utils/relations/create-relations').createRelationsContext;
+const createValidationContext = require('./validations').createValidationContext;
+const createRelationsContext = require('./create-relations').createRelationsContext;
 /**
  * @param {Object} Model 
  * @param {Object} options 

@@ -1,0 +1,11 @@
+
+geolocation filtering on nested doc poperties (e.g. gglCities.location) isn't support because of a bug mentioned here, and still open when writing this
+https://github.com/strongloop/loopback-datasource-juggler/issues/161
+
+more info about filtering nested properties using the near filter is here:
+https://stackoverflow.com/questions/40508291/loopback-near-filter-on-object-sub-field
+
+****************************
+
+
+

@@ -2,7 +2,7 @@
  * used to add a sequenceNumber field as entity counter on collection
  */
 
-const logger = require('./../../server/logger')()
+const logger = require('./../../server/logger')
 /**
  * @param {Object} Model 
  * @param {Object} options 

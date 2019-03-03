@@ -2,7 +2,7 @@
  * Used to add remote method to support update multiple models at once using bulkupdate
  */
 
-const logger = require('./../../server/logger')()
+const logger = require('./../../server/logger')
 module.exports = function (Model, options) {
 
     Model.bulkUpdate = async (models) => {

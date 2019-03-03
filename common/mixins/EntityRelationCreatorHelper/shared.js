@@ -1,7 +1,7 @@
 'use strict';
 const Propmise = require('bluebird');
 const _ = require('lodash');
-const isEmptyValues = require('../common').isEmptyValues;
+const isEmptyValues = require('./common').isEmptyValues;
 
 function parseRelations(Model, exclude) {
   const relations = Model.settings.relations;

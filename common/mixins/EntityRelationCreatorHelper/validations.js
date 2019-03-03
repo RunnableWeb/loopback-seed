@@ -2,7 +2,7 @@
 const Promise = require('bluebird');
 const _ = require('lodash');
 const parseRelations = require('./shared').parseRelations;
-const isEmptyValues = require('../common').isEmptyValues;
+const isEmptyValues = require('./common').isEmptyValues;
 
 exports.createValidationContext = (ctx, instance, Model, options) => {
   const body = ctx.req.body;

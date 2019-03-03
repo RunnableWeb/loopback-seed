@@ -1,0 +1,34 @@
+{
+  "name": "MobileUserAccessToken",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "created": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "ttl": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "mobileUser": {
+      "type": "belongsTo",
+      "model": "MobileUser",
+      "foreignKey": "mobileUserId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

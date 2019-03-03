@@ -2,7 +2,7 @@
 const Promise = require('bluebird');
 const _ = require('lodash');
 const parseRelations = require('./shared').parseRelations;
-const isEmptyValues = require('../common').isEmptyValues;
+const isEmptyValues = require('./common').isEmptyValues;
 
 exports.createRelationsContext = (ctx, instance, Model, options) => {
   const body = _.cloneDeep(ctx.req.body);
@@ -50,7 +50,7 @@ exports.createRelationsContext = (ctx, instance, Model, options) => {
 
   function removePartial(partial, relation) {
     return new Promise((resolve, reject) => {
-      instance[relation.name].remove(partial.id, err => {
+      instance[relation.name].remove(partial, err => {
         if (err) reject(err);
         else resolve();
       });
