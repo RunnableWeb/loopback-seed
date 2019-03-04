@@ -1,3 +1,0 @@
-[submodule "server/rw-js-utils"]
-	path = server/rw-js-utils
-	url = https://github.com/RunnableWeb/rw-js-utils.git
