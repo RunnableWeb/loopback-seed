@@ -1,5 +1,5 @@
 const { stringsUtils :{ replaceAt } } = require('rw-js-utils');
-const localeSvc = require('./../locale');
+const localeSvc = require('./../rw-loopbackv3-common/locale');
 const appConfig = require('./../app-config');
 const logger = require('./../logger');
 

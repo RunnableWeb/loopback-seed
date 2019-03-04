@@ -3,7 +3,7 @@ const moment = require('moment')
 
 const smsSvc = require('./../sms/sms.svc');
 const app = require('./../../server/server');
-const localeSvc = require('./../locale');
+const localeSvc = require('./../rw-loopbackv3-common/locale');
 
 
 /**

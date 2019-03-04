@@ -30,7 +30,10 @@
       "enabled": false
     }
   },
-  "session": {},
+  "session": {
+    "./rw-loopbackv3-common/middleware/locale.middleware": {},
+    "./rw-loopbackv3-common/middleware/currentUserWrapper.middleware": {}
+  },
   "auth": {},
   "parse": {},
   "routes": {
@@ -42,7 +45,7 @@
   },
   "files": {},
   "final": {
-    "loopback#urlNotFound": {}
+    "./rw-loopbackv3-common/middleware/custom404": {}
   },
   "final:after": {
     "strong-error-handler": {}

@@ -10,7 +10,7 @@ module.exports = app => {
     const AppUser = app.models.AppUser;
 
     // set acls for admin user to manage users
-    app.models.AppUser.settings.acls = require('./../acls/app-user-acls.json');
+    app.models.AppUser.settings.acls = require('./../../rw-loopbackv3-common/acls/app-user-acls.json');
 
     _setupAppUserRolesRelations();
     // critical hack to get the roles for user, when using mongodb, ObjectId should be the type of principleId

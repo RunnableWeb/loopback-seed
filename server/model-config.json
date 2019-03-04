@@ -4,13 +4,16 @@
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
-      "./models"
+      "./models",
+      "./rw-loopbackv3-common/models"
     ],
     "mixins": [
       "loopback/common/mixins",
       "loopback/server/mixins",
       "../common/mixins",
-      "./mixins"
+      "./mixins",
+      "./rw-loopbackv3-common/mixins",
+      "./rw-loopbackv3-common/mixins/EntityRelationCreatorHelper"
     ]
   },
   "User": {

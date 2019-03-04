@@ -1,0 +1,3 @@
+[submodule "server/rw-loopbackv3-common"]
+	path = server/rw-loopbackv3-common
+	url = https://bitbucket.org/runnableweb/rw-loopbackv3-common.git
