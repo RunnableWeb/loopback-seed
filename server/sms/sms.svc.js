@@ -1,4 +1,4 @@
-const { replaceAt } = require('./../rw-js-utils/strings');
+const { stringsUtils :{ replaceAt } } = require('rw-js-utils');
 const localeSvc = require('./../locale');
 const appConfig = require('./../app-config');
 const logger = require('./../logger');
